@@ -1,0 +1,25 @@
+baseURL = 'https://jingchen.github.io.git'
+languageCode = 'en-us'
+title = 'Jing Chen'
+
+theme = 'lynx' # This line tells Hugo to use the lynx theme
+
+# Add some parameters for the lynx theme (optional, but recommended)
+[params]
+    [params.assets]
+        fontawesome = true
+
+    description = "Research on energy efficiency in high-performance computing."
+    copyright = "© 2025 Jing Chen"
+    # The author parameter needs to be a table, not a string
+    [params.author]
+        name = "Jing Chen"
+        image = "/img/profile.jpg"
+
+        [params.author.links]
+            [[params.author.links.cv]]
+            href = "/files/Jing_Chen_CV.pdf"
+            icon = "fa-solid fa-file-lines" 
+            text = "Download CV"
+            
+
