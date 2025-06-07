@@ -1,0 +1,28 @@
+// Target the document link button
+.link-document {
+    background-color: #808080 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+.link-document:hover {
+    background-color: #404040 !important;
+}
+
+// Target the GitHub link button (or remove this if you delete the link)
+.link-github {
+    background-color: #333 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+.link-github:hover {
+    background-color: #111 !important;
+}
+
+// Target the links in your main text
+.prose a {
+    color: #808080;
+    text-decoration: none !important;
+}
+.prose a:hover {
+    color: #404040;
+}

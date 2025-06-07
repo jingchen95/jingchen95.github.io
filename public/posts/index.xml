@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jing Chen</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Jing Chen</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Jun 2025 20:51:46 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, Minimal Web!</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sat, 07 Jun 2025 20:51:46 +0200</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;p&gt;This is my first post on my new blog. It is built with &lt;strong&gt;Hugo&lt;/strong&gt; and designed with the &lt;strong&gt;Lynx&lt;/strong&gt; philosophy in mind.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-minimalism&#34;&gt;Why Minimalism?&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Speed:&lt;/strong&gt; Fewer resources mean faster load times.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accessibility:&lt;/strong&gt; It works for everyone, on any device.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Focus:&lt;/strong&gt; The content is the most important part.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;It&amp;rsquo;s a great way to build for the web.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
