@@ -6,7 +6,6 @@ theme = 'lynx' # This line tells Hugo to use the lynx theme
 
 # Add some parameters for the lynx theme (optional, but recommended)
 [params]
-
     description = "Research on energy efficiency in high-performance computing."
     copyright = "© 2025 Jing Chen"
     # The author parameter needs to be a table, not a string
@@ -23,11 +22,17 @@ theme = 'lynx' # This line tells Hugo to use the lynx theme
             [[params.author.links.google-scholar]]
             href = "https://scholar.google.com/citations?hl=en&user=6qyrCt4AAAAJ&view_op=list_works&authuser=1&sortby=pubdate" # <-- Replace with your URL
             text = "Google Scholar"  # <-- This is your custom button text
-            # icon = "fa-brands fa-google-scholar" # <-- The specific icon for Google Scholar
+            icon = "fa-brands fa-google-scholar" # <-- The specific icon for Google Scholar
 
             # --- Button 3: LinkedIn ---
-            # We use the key 'linkedin' for the CSS class .link-linkedin
             [[params.author.links.linkedin]]
-            href = "https://www.linkedin.com/in/jing-chen-chalmers" # <-- Replace with your URL
+            href = "https://www.linkedin.com/in/jing-chen-chalmers" 
             text = "LinkedIn Profile" # <-- This is your custom button text
-            # icon = "linkedin" 
+            icon = "linkedin" 
+
+            [[params.author.links.github]]
+            href = "https://github.com/jingchen95" 
+            text = "Github" # <-- This is your custom button text
+            icon = "github" 
+
+            
