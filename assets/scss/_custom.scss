@@ -1,28 +1,65 @@
-// Target the document link button
-.link-document {
-    background-color: #808080 !important;
-    color: white !important;
-    font-weight: bold !important;
-}
-.link-document:hover {
-    background-color: #404040 !important;
+// Main accent color - light pink
+$accent-color: #FFB6C1; // Light pink
+$accent-hover: #FF69B4; // Darker pink on hover
+
+// Alternative option: Light yellow
+// $accent-color: #FFF59D; // Light yellow
+// $accent-hover: #FFD54F; // Darker yellow on hover
+
+// All link buttons - unified style with pink/yellow color
+.link {
+    background-color: $accent-color !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
 }
 
-// Target the GitHub link button (or remove this if you delete the link)
+.link:hover {
+    background-color: $accent-hover !important;
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+// Specific button overrides (if you want to keep CV gray, comment out the section above)
+.link-cv {
+    background-color: $accent-color !important;
+    color: #333 !important;
+}
+.link-cv:hover {
+    background-color: $accent-hover !important;
+}
+
+.link-google-scholar {
+    background-color: $accent-color !important;
+    color: #333 !important;
+}
+.link-google-scholar:hover {
+    background-color: $accent-hover !important;
+}
+
+.link-linkedin {
+    background-color: $accent-color !important;
+    color: #333 !important;
+}
+.link-linkedin:hover {
+    background-color: $accent-hover !important;
+}
+
 .link-github {
-    background-color: #333 !important;
-    color: white !important;
-    font-weight: bold !important;
+    background-color: $accent-color !important;
+    color: #333 !important;
 }
 .link-github:hover {
-    background-color: #111 !important;
+    background-color: $accent-hover !important;
 }
 
 // Target the links in your main text
 .prose a {
-    color: #808080;
-    text-decoration: none !important;
+    color: $accent-hover;
+    text-decoration: underline !important;
 }
 .prose a:hover {
-    color: #404040;
+    color: darken($accent-hover, 15%);
 }

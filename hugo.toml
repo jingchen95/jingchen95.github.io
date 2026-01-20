@@ -16,13 +16,13 @@ theme = 'lynx' # This line tells Hugo to use the lynx theme
         [params.author.links]
             [[params.author.links.cv]]
             href = "/files/Jing_Chen_CV.pdf"
-            # icon = "github" 
+            icon = "link"
             text = "Download CV"
-            
+
             [[params.author.links.google-scholar]]
-            href = "https://scholar.google.com/citations?hl=en&user=6qyrCt4AAAAJ&view_op=list_works&authuser=1&sortby=pubdate" # <-- Replace with your URL
-            text = "Google Scholar"  # <-- This is your custom button text
-            icon = "fa-brands fa-google-scholar" # <-- The specific icon for Google Scholar
+            href = "https://scholar.google.com/citations?hl=en&user=6qyrCt4AAAAJ&view_op=list_works&authuser=1&sortby=pubdate"
+            text = "Google Scholar"
+            icon = "google"
 
             # --- Button 3: LinkedIn ---
             [[params.author.links.linkedin]]

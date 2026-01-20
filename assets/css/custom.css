@@ -1,0 +1,58 @@
+/* All link buttons - pink color */
+.link {
+    background-color: #FFB6C1 !important; /* Light pink */
+    color: #333 !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.link:hover {
+    background-color: #FF69B4 !important; /* Darker pink on hover */
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Individual button types */
+.link-cv {
+    background-color: #FFB6C1 !important;
+    color: #333 !important;
+}
+.link-cv:hover {
+    background-color: #FF69B4 !important;
+}
+
+.link-google-scholar {
+    background-color: #FFB6C1 !important;
+    color: #333 !important;
+}
+.link-google-scholar:hover {
+    background-color: #FF69B4 !important;
+}
+
+.link-linkedin {
+    background-color: #FFB6C1 !important;
+    color: #333 !important;
+}
+.link-linkedin:hover {
+    background-color: #FF69B4 !important;
+}
+
+.link-github {
+    background-color: #FFB6C1 !important;
+    color: #333 !important;
+}
+.link-github:hover {
+    background-color: #FF69B4 !important;
+}
+
+/* Target the links in main text */
+.prose a {
+    color: #FF69B4 !important;
+    text-decoration: underline !important;
+}
+.prose a:hover {
+    color: #FFB6C1 !important;
+    background-color: transparent !important;
+}
