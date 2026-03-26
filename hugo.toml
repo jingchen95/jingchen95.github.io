@@ -12,6 +12,7 @@ theme = 'lynx' # This line tells Hugo to use the lynx theme
     [params.author]
         name = "Jing Chen"
         image = "/img/profile.jpg"
+        headline = "Postdoctoral Researcher, Chalmers University of Technology"
 
         [params.author.links]
             [[params.author.links.cv]]
@@ -27,7 +28,7 @@ theme = 'lynx' # This line tells Hugo to use the lynx theme
             # --- Button 3: LinkedIn ---
             [[params.author.links.linkedin]]
             href = "https://www.linkedin.com/in/jing-chen-chalmers" 
-            text = "LinkedIn Profile" # <-- This is your custom button text
+            text = "LinkedIn" # <-- This is your custom button text
             icon = "linkedin" 
 
             [[params.author.links.github]]
