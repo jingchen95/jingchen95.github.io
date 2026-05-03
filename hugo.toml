@@ -11,7 +11,7 @@ theme = 'lynx' # This line tells Hugo to use the lynx theme
     # The author parameter needs to be a table, not a string
     [params.author]
         name = "Jing Chen"
-        image = "/img/profile.jpg"
+        image = "/img/Jing.JPG"
         headline = "Postdoctoral Researcher, Chalmers University of Technology"
 
         [params.author.links]

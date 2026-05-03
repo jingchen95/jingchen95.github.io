@@ -1,5 +1,12 @@
 {{ define "main" }}
   <style>
+    /* Homepage fills the viewport — hide the theme footer so the
+       photo + content occupy the whole screen. Remove this rule to
+       restore the "© 2026 ... powered by Hugo & Lynx" footer. */
+    body > footer {
+      display: none;
+    }
+
     .home-split {
       position: relative;
       isolation: isolate;
@@ -44,6 +51,29 @@
       position: relative;
       min-height: 100%;
       background: #d6c2ab;
+    }
+
+    /* Wavy divider experiment — replaces the clean vertical cut between
+       the photo and the content side. Remove the clip-path rules below
+       (and the inline SVG defs in the markup) to restore the straight cut.
+
+       Style options — swap the suffix on BOTH clip-path lines (this rule
+       and the mobile rule further down):
+         subtle  — three small ripples, gentle
+         lazy    — one big S-curve, very minimal
+         casual  — three irregular humps, hand-drawn feel
+         ripple  — five small ripples, watery
+    */
+    .home-split__media {
+      clip-path: url(#home-split-wave-casual);
+    }
+
+    .home-split__defs {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
     }
 
     .home-split__media::after {
@@ -181,6 +211,11 @@
         min-height: 45vh;
       }
 
+      .home-split__media {
+        /* Match the suffix to whichever style is active above. */
+        clip-path: url(#home-split-wave-casual-bottom);
+      }
+
       /* Mobile blur transition disabled with desktop version.
       .home-split__media::before {
         top: auto;
@@ -248,6 +283,42 @@
   </style>
 
   <article class="home-split">
+    <svg class="home-split__defs" aria-hidden="true" focusable="false" width="0" height="0">
+      <defs>
+        <!-- subtle: three small ripples, gentle -->
+        <clipPath id="home-split-wave-subtle" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 0.97 0 C 0.99 0.13 0.94 0.21 0.97 0.33 C 1.0 0.45 0.94 0.55 0.97 0.66 C 1.0 0.78 0.94 0.88 0.97 1 L 0 1 Z" />
+        </clipPath>
+        <clipPath id="home-split-wave-subtle-bottom" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 1 0 L 1 0.97 C 0.87 0.99 0.79 0.94 0.66 0.97 C 0.55 1.0 0.45 0.94 0.34 0.97 C 0.21 1.0 0.13 0.94 0 0.97 Z" />
+        </clipPath>
+
+        <!-- lazy: one big S-curve, very minimal -->
+        <clipPath id="home-split-wave-lazy" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 0.96 0 C 0.78 0.35 1.06 0.65 0.96 1 L 0 1 Z" />
+        </clipPath>
+        <clipPath id="home-split-wave-lazy-bottom" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 1 0 L 1 0.96 C 0.65 1.06 0.35 0.78 0 0.96 Z" />
+        </clipPath>
+
+        <!-- casual: three irregular humps, hand-drawn feel -->
+        <clipPath id="home-split-wave-casual" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 0.94 0 C 1.02 0.13 0.85 0.28 0.96 0.42 C 1.05 0.55 0.83 0.66 0.92 0.78 C 1.01 0.88 0.9 0.97 0.95 1 L 0 1 Z" />
+        </clipPath>
+        <clipPath id="home-split-wave-casual-bottom" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 1 0 L 1 0.95 C 0.87 1.01 0.78 0.83 0.58 0.92 C 0.45 1.05 0.34 0.85 0.22 0.96 C 0.13 1.02 0.06 0.94 0 0.94 Z" />
+        </clipPath>
+
+        <!-- ripple: five small ripples, watery -->
+        <clipPath id="home-split-wave-ripple" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 0.97 0 C 0.99 0.07 0.95 0.13 0.97 0.2 C 0.99 0.27 0.95 0.33 0.97 0.4 C 0.99 0.47 0.95 0.53 0.97 0.6 C 0.99 0.67 0.95 0.73 0.97 0.8 C 0.99 0.87 0.95 0.93 0.97 1 L 0 1 Z" />
+        </clipPath>
+        <clipPath id="home-split-wave-ripple-bottom" clipPathUnits="objectBoundingBox">
+          <path d="M 0 0 L 1 0 L 1 0.97 C 0.93 0.99 0.87 0.95 0.8 0.97 C 0.73 0.99 0.67 0.95 0.6 0.97 C 0.53 0.99 0.47 0.95 0.4 0.97 C 0.33 0.99 0.27 0.95 0.2 0.97 C 0.13 0.99 0.07 0.95 0 0.97 Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
     <div class="home-split__media">
       {{ with .Site.Params.Author.image }}
         {{ $src := . }}
